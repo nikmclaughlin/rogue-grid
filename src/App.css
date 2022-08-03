@@ -15,7 +15,7 @@
 
 .App-header {
   background-color: #282c34;
-  min-height: 100vh;
+  min-height: 10vh;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -35,4 +35,125 @@
   to {
     transform: rotate(360deg);
   }
+}
+
+
+body {
+  width: 100vw;
+  height: 100vh;
+  /*background: radial-gradient(rgba(256,225,0,0.8), rgba(0,0,0,1));*/
+}
+h1 {
+  font-size: 28pt;
+  font-family: sans-serif;
+  margin-left: 5vmin;
+}
+
+h2{
+    font-size: 26pt;
+    font-family: sans-serif;
+}
+
+p {
+  color: black;
+  font-size: 14pt;
+  font-family: monospace;
+  margin-left: 7vmin;
+}
+button{
+  margin: 1vmin;
+  font-family: monospace;
+  background-color: orange;
+  color: saddlebrown;
+  border: 2px solid saddlebrown;
+  /*hover*/
+  box-shadow: 2px 2px 3px 1px;
+}
+#gridContainer{
+  display: grid;
+  position: relative;
+  place-items: center;
+  background-color: navajowhite;
+  padding: 5vmin;
+  margin: 5vmin;
+  border-radius: 25pt;
+  border: 5px solid saddlebrown;
+}
+#gameGrid {
+  display: grid;
+  /* TODO: Dynamic template size handling so that we always get an even `n x n` grid */
+  grid-template: repeat(8, 8vmin) / repeat(8, 8vmin);
+  gap: 1vmin;
+  position: relative;
+}
+.title{
+  position: absolute;  
+  text-align: center;
+}
+.tile {
+  grid-column-start: auto;
+  grid-row-start: auto;
+  background-color: linen;
+  border: 1px solid #000;
+}
+.wall {
+  grid-column-start: auto;
+  grid-row-start: auto;
+  background-color: peru;
+  border: 1px solid #000;
+}
+.enemy {
+  grid-column-start: auto;
+  grid-row-start: auto;
+  background-color: orange;
+  border: 1px solid #D00;
+  border-radius: 30%;
+  font-size: 2vmin;
+  font-family: monospace;
+  color: red;
+  text-align: center;
+  padding: 33%;
+}
+.powerUp {
+  grid-column-start: auto;
+  grid-row-start: auto;
+  background-color: gold;
+  border: 1px solid #DA0;
+  border-radius: 10%;
+  font-family: monospace;
+  font-size: 2vmin;
+  text-align: center;
+  padding: 33%;
+}
+#exit{
+  grid-column-start: auto;
+  grid-row-start: auto;
+  background-color: limegreen;
+  border: 1px solid #000;
+}
+#player{
+  grid-column-start: auto;
+  grid-row-start: auto;
+  background-color: dodgerblue;
+  border: 2px solid #000;
+  border-radius: 50%;
+  font-size: 3vmin;
+  font-family: sans-serif;
+  color: white;
+  text-align: center;
+  padding: 25%;
+}
+#gui{
+  font-size: 3vmin;
+  font-family: sans-serif;
+  position: relative;
+  z-index: 1;
+  margin: 0px, auto, 20px;
+}
+#levelCounter{
+  font-size: 3vmin;
+  font-family: sans-serif;
+  text-align: right;
+  position: relative;
+  margin: 5px;
 }
